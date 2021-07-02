@@ -9,15 +9,25 @@ En caso contrario mostrar el mensaje “Ese animal es genial, pero prefiero las 
 */
 
 char animal[30];
-char tortuga[6][8] ={"tortuga","Tortuga","TORTUGA","tortugas", "Tortugas", "TORTUGAS"};
-
 
 int main()
 {
     printf("Cual es tu animal favorito? ");
     scanf("%s", &animal);
     
-    if (strcmp(animal, tortuga) == 0)
+
+    if (strcmp(animal, "tortuga") == 0)
+        printf("Tambien me gustan las tortugas\n");
+    else if (strcmp(animal, "Tortuga") == 0)
+        printf("Tambien me gustan las tortugas\n");
+    else if (strcmp(animal, "TORTUGA") == 0)
+        printf("Tambien me gustan las tortugas\n");
+        
+    else if (strcmp(animal, "tortugas") == 0)
+        printf("Tambien me gustan las tortugas\n");
+    else if (strcmp(animal, "Tortugas") == 0)
+        printf("Tambien me gustan las tortugas\n");
+    else if (strcmp(animal, "TORTUGAS") == 0)
         printf("Tambien me gustan las tortugas\n");
     else
         printf("Ese animal es genial, pero prefiero las tortugas\n");
