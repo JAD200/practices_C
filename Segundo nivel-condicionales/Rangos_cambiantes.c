@@ -8,7 +8,7 @@ int supLimit, infLimit, comparison;
 
 int main()
 {
-    printf("Por favor indicque 3 un limite superior, un limite inferior y uno de comparacion.\n");
+    printf("Por favor indicque 3 numeros para un limite superior, un limite inferior y uno de comparacion.\n");
     scanf("%i %i %i", &supLimit, &infLimit, &comparison );
 
     if (comparison <= supLimit && comparison >= infLimit)
