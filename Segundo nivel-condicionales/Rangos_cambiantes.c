@@ -13,10 +13,10 @@ int main()
 
     if (comparison <= supLimit && comparison >= infLimit)
         printf("El numero %i se encuentra entre los rangos de %i y %i ", comparison, supLimit, infLimit);
-    else if (comparison < infLimit && infLimit < supLimit)
-        printf("El numero %i es inferior al rango minimo", comparison, infLimit);
-    else if (comparison > supLimit && supLimit > infLimit)
-        printf("El numero %i es superior al rango de maximo", comparison, supLimit);
+    else if (comparison < infLimit && infLimit < supLimit)//Rango inferior
+        printf("El numero %i es inferior al rango minimo", comparison);
+    else if (comparison > supLimit && supLimit > infLimit)//Rango superior
+        printf("El numero %i es superior al rango de maximo", comparison);
     else
     printf("Estos numero no concuerdan con lo especificado");
 

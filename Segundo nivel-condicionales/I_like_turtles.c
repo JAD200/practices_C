@@ -14,15 +14,14 @@ int main()
 {
     printf("Cual es tu animal favorito? ");
     scanf("%s", &animal);
-    
-
+    //los singulares de tortuga
     if (strcmp(animal, "tortuga") == 0)
         printf("Tambien me gustan las tortugas\n");
     else if (strcmp(animal, "Tortuga") == 0)
         printf("Tambien me gustan las tortugas\n");
     else if (strcmp(animal, "TORTUGA") == 0)
         printf("Tambien me gustan las tortugas\n");
-        
+    //los plurales de tortuga      
     else if (strcmp(animal, "tortugas") == 0)
         printf("Tambien me gustan las tortugas\n");
     else if (strcmp(animal, "Tortugas") == 0)

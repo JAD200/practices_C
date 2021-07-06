@@ -8,24 +8,41 @@ En caso contrario, anima al usuario a que lleve una sombrilla.
 Considera que las respuestas pueden pasarse a minúsculas para evitar posibles errores.
 */
 char answer[3];
+int error; 
 
 int main()
 {
-    printf("Esta lloviendo?\n");
-    scanf("%s", answer);
-    if (strcmp(answer, "si") == 0 || strcmp(answer, "Si") == 0)
+    do
     {
-    printf("Y esta haciendo mucho viento?\n");
-    scanf("%s", answer);
-    if ((strcmp(answer, "si") == 0 || strcmp(answer, "Si") == 0))
-        printf("Hace mucho viento para llevar sombrilla");
-    else 
-        printf("Por favor lleve sombrilla :D");
-    }
-    else if (strcmp(answer, "no") == 0 || strcmp(answer, "No") == 0)
-        printf("\tEntonces que tenga un bonito dia :D\n");
-    else
-        printf("Por favor escriba si o no. \n");
+        printf("%cEsta lloviendo?\n", 168);
+        scanf("%s", answer);
+        if (strcmp(answer, "si") == 0 || strcmp(answer, "Si") == 0)
+        {
+            printf("%cY esta haciendo mucho viento?\n", 168);
+            scanf("%s", answer);
+            if ((strcmp(answer, "si") == 0 || strcmp(answer, "Si") == 0))
+            {
+                printf("Hace mucho viento para llevar sombrilla");
+                error = 0;
+            }
+            else if (strcmp(answer, "no") == 0 || strcmp(answer, "No") == 0)
+            {
+                printf("Por favor lleve sombrilla :D");
+                error = 0;
+            }
+            else
+            printf("Por favor escriba si o no. \n");        
+        }
+        else if (strcmp(answer, "no") == 0 || strcmp(answer, "No") == 0)
+        {
+            printf("\tEntonces que tenga un bonito d%ca :D\n", 161);
+            error = 0;
+        }
+        else
+            printf("Por favor escriba si o no. \n");
 
+    } while (error != 0);
+    
+   
     return 0;
 }
